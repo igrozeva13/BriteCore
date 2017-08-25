@@ -3,8 +3,8 @@ body {
 }
 
 #main-body {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 /* ----------------------------------------- Head ----------------------------------------- */
@@ -33,15 +33,20 @@ h1 {
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin-left: -15px;
+}
+
+#top-flex-container {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 25px;
 }
 
 .top-child-1 {
-  width: 50%;
 }
 
 .top-child-2 {
-  width: 50%;
   color: white;
   margin-top: 15px;
 }
@@ -51,7 +56,16 @@ button {
   padding: 5px 15px 5px 15px;
   border-width: 0px;
   margin-right: 15px;
-  justify-content: flex-end;
+}
+
+button:hover {
+  color: #E4EEEF;
+}
+
+button:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: 0 none !important;
 }
 
 button.light-blue {
@@ -70,7 +84,8 @@ button.dark-blue {
 
 .keyword-filter {
   border: none;
-  margin: 20px 0px 20px 20px;
+  margin: 20px 0px 20px 5px;
+  width: 200px;
 }
 
 form {
@@ -87,6 +102,14 @@ input {
   letter-spacing: .3px;
   margin-right: 15px;
   padding: 3px 3px 3px 6px;
+}
+
+input:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: 0 none !important;
+  border-radius: 5px;
+  border-color: #008da6;
 }
 
 .search-input {
@@ -116,22 +139,28 @@ input {
   margin-left: 10px;
 }
 
+.clear-button:hover {
+  text-decoration: none;
+  color: black;
+}
+
 .advanced-filter {
   padding-top: 20px;
-  padding-bottom: 20px;
-  border-bottom: solid;
-  border-width: 1.2px;
-  margin-left: 2px;
-  border-color:rgba(109, 110, 112, .3);
+  padding-bottom: 30px;
+  padding-left: 0px;
+  display: none;
 }
 
 .advanced-filter-tab {
   display: flex;
   justify-content: center;
-  margin-top: -2px;
+  border-top: solid;
+  border-width: 1.2px;
+  border-color:rgba(109, 110, 112, .3);
+  margin-left: 0px;
 }
 
-.tab-item {
+.tab {
   width: 175px;
   text-align: center;
   border-bottom-left-radius: 5px;
@@ -144,6 +173,7 @@ input {
   border-width: thin;
   border-color: rgba(109, 110, 112, .3);
   color: #6D6E70;
+  margin-top: -1px;
 }
 
 .filter-icon {
@@ -202,4 +232,15 @@ th.center, td.center {
 
 tr img {
   width: 18px;
+}
+
+#remove-selected {
+  margin-bottom: 250px;
+}
+
+/* ----------------------------------------- Footer ----------------------------------------- */
+
+#foot {
+  background-color: #6d6e70;
+  height: 150px;
 }
