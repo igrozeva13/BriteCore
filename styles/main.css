@@ -1,3 +1,13 @@
+body {
+  font-family: "Effra";
+}
+
+#main-body {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* ----------------------------------------- Head ----------------------------------------- */
 #logo {
   margin-left: 5%;
   margin-top: 50px;
@@ -7,4 +17,189 @@
 
 #head {
   background-color: #E4EEEF;
+  width: 100%;
+}
+
+/* ----------------------------------------- Title and Buttons ----------------------------------------- */
+
+h1 {
+  font-size: 24px;
+  letter-spacing: 1.2px;
+  color: #6D6E70;
+}
+
+.container {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-left: -15px;
+}
+
+.top-child-1 {
+  width: 50%;
+}
+
+.top-child-2 {
+  width: 50%;
+  color: white;
+  margin-top: 15px;
+}
+
+button {
+  border-radius: 5px;
+  padding: 5px 15px 5px 15px;
+  border-width: 0px;
+  margin-right: 15px;
+  justify-content: flex-end;
+}
+
+button.light-blue {
+  background-color: #008da6;
+}
+
+button.dark-blue {
+  background-color: #364f54;
+}
+
+/* ----------------------------------------- Filter Styles ----------------------------------------- */
+
+.m-glass {
+  max-width: 20px;
+}
+
+.keyword-filter {
+  border: none;
+  margin: 20px 0px 20px 20px;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+input {
+  font-size: 12px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: rgba(109, 110, 112, .1);
+  letter-spacing: .3px;
+  margin-right: 15px;
+  padding: 3px 3px 3px 6px;
+}
+
+.search-input {
+  width: 250px;
+}
+
+.filter-button, .clear-button {
+  padding: 5px;
+}
+
+.filter-button {
+  background-color: #008DA6;
+  border-radius: 5px;
+  width: 75px;
+  color: white;
+  letter-spacing: .3px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.clear-button {
+  letter-spacing: .3px;
+  font-size: 12px;
+  text-align: center;
+  color: #6D6E70;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.advanced-filter {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: solid;
+  border-width: 1.2px;
+  margin-left: 2px;
+  border-color:rgba(109, 110, 112, .3);
+}
+
+.advanced-filter-tab {
+  display: flex;
+  justify-content: center;
+  margin-top: -2px;
+}
+
+.tab-item {
+  width: 175px;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom: solid;
+  border-left: solid;
+  border-right: solid;
+  background-color: white;
+  padding-top: 10px;
+  border-width: thin;
+  border-color: rgba(109, 110, 112, .3);
+  color: #6D6E70;
+}
+
+.filter-icon {
+  width: 15px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 3px;
+}
+
+
+/* ----------------------------------------- Table Styles ----------------------------------------- */
+
+table {
+  border: solid;
+  border-color: rgba(109, 110, 112, .3);
+  border-width: thin;
+  border-radius: 5px;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.table-box {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+th {
+  background-color:rgba(109, 110, 112, .3);
+  height: 55px;
+}
+
+td {
+  height: 45px;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(109, 110, 112, .1);
+}
+
+.client-name {
+  font-weight: bold;
+  color: #6D6E70;
+  text-decoration: none;
+}
+
+.client-name:hover {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+th.center, td.center {
+  text-align: center;
+}
+
+tr img {
+  width: 18px;
 }

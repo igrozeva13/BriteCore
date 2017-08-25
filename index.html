@@ -20,69 +20,82 @@
     <img id="logo" src="img/logo.png">
   </div>
 
-  <div id="top">
-    <h1>AGENCY DIRECTORY</h1>
-    <button class="light blue">+ ADD NEW AGENT</button>
-    <button class="dark blue">+ ADD NEW AGENCY</button>
+<div id="main-body">
+  <div id="top" class="container">
+    <div class="top-child-1">
+      <h1>AGENCY DIRECTORY</h1>
+    </div>
+    <div class="top-child-2">
+      <button class="light-blue">+ ADD NEW AGENT</button>
+      <button class="dark-blue">+ ADD NEW AGENCY</button>
+    </div>
   </div>
 
   <div id="filter">
-    <form><img src=""><input type="text" name"FILTER BY KEYWORDS"><br>
-    </form>
-      <div class="advanced-filter">
+      <img class="m-glass" src="img/mglass-03.png">
+      <input class="keyword-filter" type="text" name="keywords" placeholder="FILTER BY KEYWORDS"><br>
+
+      <div class="advanced-filter container">
           <form>
-          Keywords<input type="text" name="SEARCH">
-          <input type="text" name="TYPE">
-          <input type="text" name="STATE">
-          <input type="text" name="STATUS">
+          <input class="search-input" type="text" name="search" placeholder="SEARCH">
+          <input type="text" name="TYPE" placeholder="TYPE">
+          <input type="text" name="STATE" placeholder="STATE">
+          <input type="text" name="STATUS" placeholder="STATUS">
           </form>
           <a class="filter-button" href="">FILTER</a>
           <a class="clear-button">CLEAR ALL</a>
       </div>
+      <div class="advanced-filter-tab container">
+        <div class="tab-item">
+          <img class="filter-icon" src="img/filter-05.png"></img>
+          <p>ADVANCED FILTER</p>
+        </div>
+      </div>
+
   </div>
 
   <div id="data">
     <p>SELECT ALL   |    DESELECT ALL</p>
-    <div class="containing-box">
+    <div class="table-box">
       <table>
         <tr>
-          <th>box</th>
-          <th>NAME</th>
-          <th>TYPE</th>
-          <th>STATE</th>
-          <th>LICENSE STATUS</th>
-          <th>EDIT</th>
-          <th>REMOVE</th>
+          <th class="center" width="5%"><img src="img/checkbox.png"></th>
+          <th width="25%">NAME</th>
+          <th width="20%">TYPE</th>
+          <th width="15%">STATE</th>
+          <th width="20%">LICENSE STATUS</th>
+          <th class="center edit" width="4%">EDIT</th>
+          <th class="center remove" width="6%">REMOVE</th>
         </tr>
 
         <tr>
-          <td><img src=""></td>
-          <td class="client-name">Agency Name</td>
+          <td class="center"><img src="img/checkbox.png"></td>
+          <td><a class="client-name" href="#">Agency Name</a></td>
           <td>Agency</td>
           <td>OH</td>
           <td class="active-status">Active</td>
-          <td><img src=""></td>
-          <td><img src=""></td>
+          <td class="center edit" ><img src="img/edit.png"></td>
+          <td class="center remove"><img src="img/remove.png"></td>
         </tr>
 
         <tr>
-          <td><img src=""></td>
-          <td class="client-name">Agency Name</td>
+          <td class="center"><img src="img/checkbox.png"></td>
+          <td><a class="client-name" href="#">Agency Name</a></td>
           <td>Agency</td>
           <td>OH</td>
           <td class="active-status">Active</td>
-          <td><img src=""></td>
-          <td><img src=""></td>
+          <td class="center edit"><img src="img/edit.png"></td>
+          <td class="center remove"><img src="img/remove.png"></td>
         </tr>
 
         <tr>
-          <td><img src=""></td>
-          <td class="client-name">Agency Name</td>
+          <td class="center"><img src="img/checkbox.png"></td>
+          <td><a class="client-name" href="#">Agency Name</a></td>
           <td>Agency</td>
           <td>OH</td>
           <td class="active-status">Active</td>
-          <td><img src=""></td>
-          <td><img src=""></td>
+          <td class="center edit"><img src="img/edit.png"></td>
+          <td class="center remove"><img src="img/remove.png"></td>
         </tr>
 
       </table>
@@ -120,7 +133,7 @@
 
 
 
-
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
