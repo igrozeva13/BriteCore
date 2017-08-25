@@ -64,6 +64,20 @@ h1 {
   color: #6D6E70;
 }
 
+h2 {
+  font-size: 18px;
+  letter-spacing: 1.2px;
+  color: #6D6E70;
+}
+
+h3 {
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  color: #6D6E70;
+  margin: 0px;
+  padding-top: 5px;
+}
+
 .container {
   display: -webkit-flex;
   display: flex;
@@ -100,6 +114,42 @@ button.dark-blue {
 .add-new-button {
   letter-spacing: .4px;
 }
+
+.state-button {
+  background-color: #E4EEEF ;
+  color: #008da6;
+  letter-spacing: .4px;
+  font-size: 12px;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.state-button:hover {
+  color: #364f54;
+}
+
+@media only screen and (min-width: 961px) {
+#states {
+  display: inline-flex;
+}}
+
+@media only screen and (max-width: 960px) {
+#states {
+  display: flex;
+  flex-direction: column;
+  }
+
+.state-button {
+  margin-top: 10px;
+}
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  margin-left: 20px;
+}
+
 
 /* ----------------------------------------- Large Screen Buttons ----------------------------------------- */
 @media only screen and (min-width: 961px) {
@@ -342,10 +392,10 @@ table {
   border: solid;
   border-color: rgba(109, 110, 112, .3);
   border-width: thin;
-  border-radius: 5px;
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
+
 }
 
 .table-box {
@@ -392,13 +442,17 @@ tr img {
   margin-bottom: 150px;
 }
 
-.edit, .remove {
+.edit, .remove, .download {
   opacity: 0.5;
 }
 
-.edit:hover, .remove:hover {
+.edit:hover, .remove:hover, .download:hover {
   opacity: 1;
   cursor: pointer;
+}
+
+.edit-head, .remove-head, .download-head {
+    font-size: 12px;
 }
 
 .active-status {
@@ -413,11 +467,100 @@ tr img {
   color: red;
 }
 
+
+/* ----------------------------------------- Agency Page Tabs ----------------------------------------- */
+
+@media only screen and (max-width: 960px) {
+  .tabs li {
+  font-size: 10px;
+  padding: 5px 10px 5px 5px;
+  text-align: center;
+  }
+
+  ul {
+  margin: 0px 0px 0px 0px;
+  width: 100%;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  .tabs li {
+  font-size: 14px;
+  padding: 5px 15px 5px 15px;
+  }
+
+  ul {
+  margin: 0px 40px 0px 0px;
+  }
+}
+
+#tabbed-pages {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-bottom: solid;
+  border-width: 1.2px;
+  border-color:rgba(109, 110, 112, .3);
+}
+
+ul {
+  list-style-type: none;
+
+  padding: 0px;
+}
+
+li {
+  display: inline-block;
+  letter-spacing: 1.2px;
+  color: #6D6E70;
+  font-weight: normal;
+}
+
+li.current {
+  color: black;
+  border-bottom: solid #008da6;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.current {
+  display: inherit;
+}
+
+.tab-link:hover {
+  text-decoration: none;
+}
+
+
+/* ----------------------------------------- End Agency Page Tabs ----------------------------------------- */
+
+th.state-row {
+  background-color: #E4EEEF;
+  padding-left: 30px;
+  font-size: 20px;
+  border: solid;
+  border-color: rgba(109, 110, 112, .3);
+  border-width: thin;
+}
+
+.dropdown {
+  margin-left: 20px;
+}
+
+table.outside-table {
+    margin-top: 20px;
+}
+
+
+
 /* ----------------------------------------- Footer ----------------------------------------- */
 
 #foot {
   bottom: 0px;
   width: 100%;
+  position: relative;
 }
 
 #grey-foot {
@@ -435,4 +578,8 @@ p.foot {
   padding-top: 15px;
   color: white;
   margin: 0px;
+}
+
+.data-space {
+  height: 1000px;
 }

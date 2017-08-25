@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>BriteCore Agency Directory</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script src="https://use.typekit.net/wrj0tsm.js"></script>
+ <script>try{Typekit.load({ async: true });}catch(e){}</script>
+ <link rel="stylesheet" type="text/css" href="styles/main.css">
+ <script type="text/javascript" src="jquery/script.js"></script>
+</head>
+
+
+<body>
+  <div id="head">
+    <img id="logo" src="img/logo.png">
+  </div>
+
+<div id="main-body">
+  <div id="top-flex-container">
+    <div class="top-child-1">
+      <h1>AGENCY NAME</h1>
+    </div>
+    <div class="top-child-2">
+      <button class="add-new-button light-blue">+ ADD NEW STATE(S)</button>
+    </div>
+
+    <div class="top-child-3">
+      <button class="add-new-button light-blue">+ ADD NEW</button>
+      <button class="add-new-button dark-blue"><img class="m-glass-white" src="img/mglass-white.png">FILTER</button>
+    </div>
+  </div>
+<br>
+<br>
+<div id="states">
+  <h3>LICENSED IN:</h3>
+    <button class ="state-button pale-blue">OHIO</button>
+    <button class ="state-button pale-blue">PENNYSYLVANIA</button>
+    <button class ="state-button pale-blue">SOUTH CAROLINA</button>
+    <button class ="state-button pale-blue">WEST VIRGINIA</button>
+    <button class ="state-button pale-blue">KENTUCKY</button>
+    <img class="edit icon" src="img/edit.png">
+</div>
+
+
+<div id="tabbed-pages">
+  <ul class="tabs">
+    <li class="tab-link current" data-tab="tab-1">AGENCY <br id="status-break"> INFORMATION</li>
+    <li class="tab-link" data-tab="tab-2">POLICY TYPES</li>
+    <li class="tab-link" data-tab="tab-3">LICENSES</li>
+    <li class="tab-link" data-tab="tab-4">AGENTS</li>
+  </ul>
+</div>
+
+
+<!--AGENCY INFO ---------------------------------------------------------------------------------------------------------->
+<div id="tab-1" class="tab-content current">
+
+  <div id="tab-head">
+    <div id="top-flex-container">
+        <div class="top-child-1">
+          <h2>CONTACT INFORMATION</h2>
+        </div>
+    </div>
+  </div>
+  <div class="data-space">
+  </div>
+</div>
+
+<!--POLICIES ---------------------------------------------------------------------------------------------------------->
+<div id="tab-2" class="tab-content">
+
+  <div id="tab-head">
+    <div id="top-flex-container">
+        <div class="top-child-1">
+          <h2>POLICIES</h2>
+        </div>
+        <div class="top-child-2">
+          <button class="add-new-button dark-blue">MANAGE POLICIES</button>
+        </div>
+    </div>
+
+    <div class="data-space">
+    </div>
+  </div>
+
+</div>
+
+<!--LICENSES ---------------------------------------------------------------------------------------------------------->
+<div id="tab-3" class="tab-content">
+  <div id="tab-head">
+    <div id="top-flex-container">
+        <div class="top-child-1">
+          <h2>LICENSES</h2>
+        </div>
+        <div class="top-child-2">
+          <button class="add-new-button dark-blue">+ ADD NEW LICENSE</button>
+        </div>
+    </div>
+  </div>
+
+    <div id="filter">
+        <img class="m-glass" src="img/mglass-03.png">
+        <input class="keyword-filter" type="text" name="keywords" placeholder="FILTER BY KEYWORDS">
+        <button class="filter-button" class="light-blue">FILTER</button>
+
+        <div class="advanced-filter container">
+            <form id="advanced-filter-form">
+              <input class="search-input" type="text" name="search" placeholder="SEARCH">
+              <input list="types" name="TYPE" placeholder="TYPE">
+                <datalist id="types">
+                    <option value="Agency">
+                    <option value="Agent">
+                </datalist>
+              <input type="text" name="STATE" placeholder="STATE">
+              <input list="status" name="STATUS" placeholder="STATUS">
+                <datalist id="status">
+                  <option value="Active">
+                  <option value="Expiring">
+                  <option value="Expired">
+
+                </datalist>
+            </form>
+            <button class="filter-button" class="light-blue">FILTER</button>
+            <a class="clear-button">CLEAR ALL</a>
+        </div>
+
+        <div class="advanced-filter-border container">
+          <div class="tab">
+            <img class="filter-icon" src="img/filter-05.png"></img>
+            <p>ADVANCED FILTER</p>
+          </div>
+        </div>
+
+    </div>
+
+    <div id="data">
+      <div id="select-options"><a href="" id="select-all">SELECT ALL<a> |<a href="" id="deselect-all">DESELECT ALL</a></div>
+      <div class="table-box">
+
+
+        <table class="outside-table">
+            <tr class="state-row">
+              <th class="state-row">OHIO<img class="dropdown" src="img/dropdown.png"></th>
+            <tr>
+          <table class="inside-table">
+            <tr>
+              <th class="column-1 center" width="5%"><input type="checkbox" name="select-all" id="select-all-checkbox"></th>
+              <th width="20%">LICENSE CLASS</th>
+              <th width="20%">LINE OF AUTHORITY</th>
+              <th width="15%">ISSUE DATE</th>
+              <th width="15%">EXP. DATE</th>
+              <th class="center download-head" width="5%">DOWNLOAD</th>
+              <th class="center edit-head" width="5%">EDIT</th>
+              <th class="center remove-head" width="5%">REMOVE</th>
+            </tr>
+
+            <tr>
+              <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+              <td>Producer</td>
+              <td>Accident Health or Sickness</td>
+              <td>01/01/17</td>
+              <td>01/01/18</td>
+              <td class="center download"><img src="img/download.png"></td>
+              <td class="center edit" ><img src="img/edit.png"></td>
+              <td class="center remove"><img src="img/remove.png"></td>
+            </tr>
+
+            <tr>
+              <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+              <td>Producer</td>
+              <td>Property</td>
+              <td>08/26/16</td>
+              <td class="soon-status">08/27/17</td>
+              <td class="center download"><img src="img/download.png"></td>
+              <td class="center edit" ><img src="img/edit.png"></td>
+              <td class="center remove"><img src="img/remove.png"></td>
+            </tr>
+
+            <tr>
+              <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+              <td>Auto Physical Damage</td>
+              <td>Auto Physical Damage</td>
+              <td>10/13/16</td>
+              <td>10/03/17</td>
+              <td class="center download"><img src="img/download.png"></td>
+              <td class="center edit" ><img src="img/edit.png"></td>
+              <td class="center remove"><img src="img/remove.png"></td>
+            </tr>
+
+            <tr>
+              <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+              <td>Country Farm Mutual Insurance</td>
+              <td>Country Farm Mutual Insurance</td>
+              <td>06/08/16</td>
+              <td class="expired-status">06/08/17</td>
+              <td class="center download"><img src="img/download.png"></td>
+              <td class="center edit" ><img src="img/edit.png"></td>
+              <td class="center remove"><img src="img/remove.png"></td>
+            </tr>
+          </table>
+        </table>
+
+        <table class="outside-table">
+            <tr class="state-row">
+              <th class="state-row">PENNYSYLVANIA<img class="dropdown" src="img/dropdown.png"></th>
+            <tr>
+          <table class="inside-table">
+            <tr>
+              <th class="column-1 center" width="5%"><input type="checkbox" name="select-all" id="select-all-checkbox"></th>
+              <th width="20%">LICENSE CLASS</th>
+              <th width="20%">LINE OF AUTHORITY</th>
+              <th width="15%">ISSUE DATE</th>
+              <th width="15%">EXP. DATE</th>
+              <th class="center download-head" width="5%">DOWNLOAD</th>
+              <th class="center edit-head" width="5%">EDIT</th>
+              <th class="center remove-head" width="5%">REMOVE</th>
+            </tr>
+
+            <tr>
+              <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+              <td>Producer</td>
+              <td>Accident Health or Sickness</td>
+              <td>01/01/17</td>
+              <td>01/01/18</td>
+              <td class="center download"><img src="img/download.png"></td>
+              <td class="center edit" ><img src="img/edit.png"></td>
+              <td class="center remove"><img src="img/remove.png"></td>
+            </tr>
+
+            <tr>
+              <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+              <td>Producer</td>
+              <td>Property</td>
+              <td>08/26/16</td>
+              <td class="soon-status">08/27/17</td>
+              <td class="center download"><img src="img/download.png"></td>
+              <td class="center edit" ><img src="img/edit.png"></td>
+              <td class="center remove"><img src="img/remove.png"></td>
+            </tr>
+
+            <tr>
+              <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+              <td>Auto Physical Damage</td>
+              <td>Auto Physical Damage</td>
+              <td>10/13/16</td>
+              <td>10/03/17</td>
+              <td class="center download"><img src="img/download.png"></td>
+              <td class="center edit" ><img src="img/edit.png"></td>
+              <td class="center remove"><img src="img/remove.png"></td>
+            </tr>
+
+            <tr>
+              <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+              <td>Country Farm Mutual Insurance</td>
+              <td>Country Farm Mutual Insurance</td>
+              <td>06/08/16</td>
+              <td class="expired-status">06/08/17</td>
+              <td class="center download"><img src="img/download.png"></td>
+              <td class="center edit" ><img src="img/edit.png"></td>
+              <td class="center remove"><img src="img/remove.png"></td>
+            </tr>
+          </table>
+        </table>
+
+        <table class="outside-table">
+            <tr class="state-row">
+              <th class="state-row">SOUTH CAROLINA<img class="dropdown" src="img/dropdown.png"></th>
+            <tr>
+          <table class="inside-table">
+            <tr>
+              <th class="column-1 center" width="5%"><input type="checkbox" name="select-all" id="select-all-checkbox"></th>
+              <th width="20%">LICENSE CLASS</th>
+              <th width="20%">LINE OF AUTHORITY</th>
+              <th width="15%">ISSUE DATE</th>
+              <th width="15%">EXP. DATE</th>
+              <th class="center download-head" width="5%">DOWNLOAD</th>
+              <th class="center edit-head" width="5%">EDIT</th>
+              <th class="center remove-head" width="5%">REMOVE</th>
+            </tr>
+
+            <tr>
+              <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+              <td>Country Farm Mutual Insurance</td>
+              <td>Country Farm Mutual Insurance</td>
+              <td>06/08/16</td>
+              <td class="expired-status">06/08/17</td>
+              <td class="center download"><img src="img/download.png"></td>
+              <td class="center edit" ><img src="img/edit.png"></td>
+              <td class="center remove"><img src="img/remove.png"></td>
+            </tr>
+          </table>
+      </table>
+
+      </div>
+        <div id="select-options"><p id="remove-selected">REMOVE SELECTED</p></div>
+    </div>
+  </div>
+
+<!--END LICENSES ---------------------------------------------------------------------------------------------------------->
+
+  <!--AGENTS ---------------------------------------------------------------------------------------------------------->
+<div id="tab-4" class="tab-content">
+    <div id="tab-head">
+      <div id="top-flex-container">
+          <div class="top-child-1">
+            <h2>AGENTS</h2>
+          </div>
+          <div class="top-child-2">
+            <button class="add-new-button dark-blue">+ ADD NEW AGENT</button>
+          </div>
+      </div>
+    </div>
+
+      <div id="filter">
+          <img class="m-glass" src="img/mglass-03.png">
+          <input class="keyword-filter" type="text" name="keywords" placeholder="FILTER BY KEYWORDS">
+          <button class="filter-button" class="light-blue">FILTER</button>
+
+          <div class="advanced-filter container">
+              <form id="advanced-filter-form">
+                <input class="search-input" type="text" name="search" placeholder="SEARCH">
+                <input list="types" name="TYPE" placeholder="TYPE">
+                  <datalist id="types">
+                      <option value="Agency">
+                      <option value="Agent">
+                  </datalist>
+                <input type="text" name="STATE" placeholder="STATE">
+                <input list="status" name="STATUS" placeholder="STATUS">
+                  <datalist id="status">
+                    <option value="Active">
+                    <option value="Expiring">
+                    <option value="Expired">
+
+                  </datalist>
+              </form>
+              <button class="filter-button" class="light-blue">FILTER</button>
+              <a class="clear-button">CLEAR ALL</a>
+          </div>
+
+          <div class="advanced-filter-border container">
+            <div class="tab">
+              <img class="filter-icon" src="img/filter-05.png"></img>
+              <p>ADVANCED FILTER</p>
+            </div>
+          </div>
+
+      </div>
+
+      <div id="data">
+        <div id="select-options"><a href="" id="select-all">SELECT ALL<a> |<a href="" id="deselect-all">DESELECT ALL</a></div>
+        <div class="table-box">
+
+
+          <table class="outside-table">
+              <tr class="state-row">
+                <th class="state-row">OHIO<img class="dropdown" src="img/dropdown.png"></th>
+              <tr>
+            <table class="inside-table">
+              <tr>
+                <th class="column-1 center" width="4%"><input type="checkbox" name="select-all" id="select-all-checkbox"></th>
+                <th width="15%">AGENT NAME</th>
+                <th width="20%">LICENSE CLASS</th>
+                <th width="20%">LINE OF AUTHORITY</th>
+                <th width="10%">ISSUE DATE</th>
+                <th width="10%">EXP. DATE</th>
+                <th class="center download-head" width="7%">DOWNLOAD</th>
+                <th class="center edit-head" width="7%">EDIT</th>
+                <th class="center remove-head" width="7%">REMOVE</th>
+              </tr>
+
+              <tr>
+                <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+                <td><a class="client-name" href="">Agent Name</a></td>
+                <td>Producer</td>
+                <td>Accident Health or Sickness</td>
+                <td>01/01/17</td>
+                <td>01/01/18</td>
+                <td class="center download"><img src="img/download.png"></td>
+                <td class="center edit" ><img src="img/edit.png"></td>
+                <td class="center remove"><img src="img/remove.png"></td>
+              </tr>
+
+              <tr>
+                <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+                <td><a class="client-name" href="">Agent Name</a></td>
+                <td>Producer</td>
+                <td>Property</td>
+                <td>08/26/16</td>
+                <td class="soon-status">08/27/17</td>
+                <td class="center download"><img src="img/download.png"></td>
+                <td class="center edit" ><img src="img/edit.png"></td>
+                <td class="center remove"><img src="img/remove.png"></td>
+              </tr>
+
+              <tr>
+                <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+                <td><a class="client-name" href="">Agent Name</a></td>
+                <td>Auto Physical Damage</td>
+                <td>Auto Physical Damage</td>
+                <td>10/13/16</td>
+                <td>10/03/17</td>
+                <td class="center download"><img src="img/download.png"></td>
+                <td class="center edit" ><img src="img/edit.png"></td>
+                <td class="center remove"><img src="img/remove.png"></td>
+              </tr>
+
+              <tr>
+                <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+                <td><a class="client-name" href="">Agent Name</a></td>
+                <td>Country Farm Mutual Insurance</td>
+                <td>Country Farm Mutual Insurance</td>
+                <td>06/08/16</td>
+                <td class="expired-status">06/08/17</td>
+                <td class="center download"><img src="img/download.png"></td>
+                <td class="center edit" ><img src="img/edit.png"></td>
+                <td class="center remove"><img src="img/remove.png"></td>
+              </tr>
+            </table>
+          </table>
+
+          <table class="outside-table">
+              <tr class="state-row">
+                <th class="state-row">PENNYSYLVANIA<img class="dropdown" src="img/dropdown.png"></th>
+              <tr>
+            <table class="inside-table">
+              <tr>
+                <th class="column-1 center" width="4%"><input type="checkbox" name="select-all" id="select-all-checkbox"></th>
+                <th width="15%">AGENT NAME</th>
+                <th width="20%">LICENSE CLASS</th>
+                <th width="20%">LINE OF AUTHORITY</th>
+                <th width="10%">ISSUE DATE</th>
+                <th width="10%">EXP. DATE</th>
+                <th class="center download-head" width="7%">DOWNLOAD</th>
+                <th class="center edit-head" width="7%">EDIT</th>
+                <th class="center remove-head" width="7%">REMOVE</th>
+              </tr>
+
+              <tr>
+                <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+                <td><a class="client-name" href="">Agent Name</a></td>
+                <td>Producer</td>
+                <td>Accident Health or Sickness</td>
+                <td>01/01/17</td>
+                <td>01/01/18</td>
+                <td class="center download"><img src="img/download.png"></td>
+                <td class="center edit" ><img src="img/edit.png"></td>
+                <td class="center remove"><img src="img/remove.png"></td>
+              </tr>
+
+              <tr>
+                <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+                <td><a class="client-name" href="">Agent Name</a></td>
+                <td>Producer</td>
+                <td>Property</td>
+                <td>08/26/16</td>
+                <td class="soon-status">08/27/17</td>
+                <td class="center download"><img src="img/download.png"></td>
+                <td class="center edit" ><img src="img/edit.png"></td>
+                <td class="center remove"><img src="img/remove.png"></td>
+              </tr>
+
+              <tr>
+                <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+                <td><a class="client-name" href="">Agent Name</a></td>
+                <td>Auto Physical Damage</td>
+                <td>Auto Physical Damage</td>
+                <td>10/13/16</td>
+                <td>10/03/17</td>
+                <td class="center download"><img src="img/download.png"></td>
+                <td class="center edit" ><img src="img/edit.png"></td>
+                <td class="center remove"><img src="img/remove.png"></td>
+              </tr>
+
+              <tr>
+                <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+                <td><a class="client-name" href="">Agent Name</a></td>
+                <td>Country Farm Mutual Insurance</td>
+                <td>Country Farm Mutual Insurance</td>
+                <td>06/08/16</td>
+                <td class="expired-status">06/08/17</td>
+                <td class="center download"><img src="img/download.png"></td>
+                <td class="center edit" ><img src="img/edit.png"></td>
+                <td class="center remove"><img src="img/remove.png"></td>
+              </tr>
+            </table>
+          </table>
+
+          <table class="outside-table">
+              <tr class="state-row">
+                <th class="state-row">SOUTH CAROLINA<img class="dropdown" src="img/dropdown.png"></th>
+              <tr>
+            <table class="inside-table">
+              <tr>
+                <th class="column-1 center" width="4%"><input type="checkbox" name="select-all" id="select-all-checkbox"></th>
+                <th width="15%">AGENT NAME</th>
+                <th width="20%">LICENSE CLASS</th>
+                <th width="20%">LINE OF AUTHORITY</th>
+                <th width="10%">ISSUE DATE</th>
+                <th width="10%">EXP. DATE</th>
+                <th class="center download-head" width="7%">DOWNLOAD</th>
+                <th class="center edit-head" width="7%">EDIT</th>
+                <th class="center remove-head" width="7%">REMOVE</th>
+              </tr>
+
+              <tr>
+                <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+                <td><a class="client-name" href="">Agent Name</a></td>
+                <td>Country Farm Mutual Insurance</td>
+                <td>Country Farm Mutual Insurance</td>
+                <td>06/08/16</td>
+                <td class="expired-status">06/08/17</td>
+                <td class="center download"><img src="img/download.png"></td>
+                <td class="center edit" ><img src="img/edit.png"></td>
+                <td class="center remove"><img src="img/remove.png"></td>
+              </tr>
+            </table>
+        </table>
+
+        </div>
+          <div id="select-options"><p id="remove-selected">REMOVE SELECTED</p></div>
+      </div>
+</div>
+
+
+</div>
+
+  <div id="foot">
+    <div id="grey-foot"></div>
+    <div id="black-foot"></div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
