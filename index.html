@@ -26,8 +26,13 @@
       <h1>AGENCY DIRECTORY</h1>
     </div>
     <div class="top-child-2">
-      <button class="light-blue">+ ADD NEW AGENT</button>
-      <button class="dark-blue">+ ADD NEW AGENCY</button>
+      <button class="add-new-button light-blue">+ ADD NEW AGENT</button>
+      <button class="add-new-button dark-blue">+ ADD NEW AGENCY</button>
+    </div>
+
+    <div class="top-child-3">
+      <button class="add-new-button light-blue">+ ADD NEW</button>
+      <button class="add-new-button dark-blue"><img class="m-glass-white" src="img/mglass-white.png">FILTER</button>
     </div>
   </div>
 
@@ -37,17 +42,35 @@
       <button class="filter-button" class="light-blue">FILTER</button>
 
       <div class="advanced-filter container">
-          <form>
-          <input class="search-input" type="text" name="search" placeholder="SEARCH">
-          <input type="text" name="TYPE" placeholder="TYPE">
-          <input type="text" name="STATE" placeholder="STATE">
-          <input type="text" name="STATUS" placeholder="STATUS">
+          <form id="advanced-filter-form">
+            <input class="search-input" type="text" name="search" placeholder="SEARCH">
+            <input list="types" name="TYPE" placeholder="TYPE">
+              <datalist id="types">
+                  <option value="Agency">
+                  <option value="Agent">
+              </datalist>
+            <input list="states" name="STATE" placeholder="STATE">
+              <datalist id="states">
+                <option value="Kentucky">
+                <option value="Ohio">
+                <option value="South Carolina">
+                <option value="North Carolina">
+                <option value="West Virigina">
+                <option value="Virigina">
+              </datalist>
+            <input list="status" name="STATUS" placeholder="STATUS">
+              <datalist id="status">
+                <option value="Active">
+                <option value="Expiring">
+                <option value="Expired">
+
+              </datalist>
           </form>
           <button class="filter-button" class="light-blue">FILTER</button>
           <a class="clear-button">CLEAR ALL</a>
       </div>
 
-      <div class="advanced-filter-tab container">
+      <div class="advanced-filter-border container">
         <div class="tab">
           <img class="filter-icon" src="img/filter-05.png"></img>
           <p>ADVANCED FILTER</p>
@@ -57,32 +80,62 @@
   </div>
 
   <div id="data">
-    <p>SELECT ALL   |    DESELECT ALL</p>
+    <div id="select-options"><a href="" id="select-all">SELECT ALL<a> |<a href="" id="deselect-all">DESELECT ALL</a></div>
     <div class="table-box">
       <table>
         <tr>
-          <th class="center" width="5%"><input type="checkbox" name="select-all" id="select-all"></th>
+          <th class="column-1 center" width="5%"><input type="checkbox" name="select-all" id="select-all-checkbox"></th>
           <th width="25%">NAME</th>
           <th width="20%">TYPE</th>
-          <th width="15%">STATE</th>
-          <th width="20%">LICENSE STATUS</th>
-          <th class="center edit" width="4%">EDIT</th>
-          <th class="center remove" width="6%">REMOVE</th>
+          <th width="15%">STATES</th>
+          <th width="20%">LICENSE <br id="status-break">STATUS</th>
+          <th class="center edit-head" width="4%">EDIT</th>
+          <th class="center remove-head" width="6%">REMOVE</th>
         </tr>
 
         <tr>
-          <td class="center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+          <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
           <td><a class="client-name" href="#">Agency Name</a></td>
           <td>Agency</td>
-          <td>OH</td>
+          <td>Multiple</td>
           <td class="active-status">Active</td>
           <td class="center edit" ><img src="img/edit.png"></td>
           <td class="center remove"><img src="img/remove.png"></td>
         </tr>
 
         <tr>
-          <td class="center"><input type="checkbox" name="checkbox-2" id="checkbox-2"></td>
+          <td class="column-1 center"><input type="checkbox" name="checkbox-2" id="checkbox-2"></td>
+          <td><a class="client-name" href="#">Agent Name</a></td>
+          <td>Agency</td>
+          <td>OH, SC, NC, KY</td>
+          <td class="active-status">Active</td>
+          <td class="center edit"><img src="img/edit.png"></td>
+          <td class="center remove"><img src="img/remove.png"></td>
+        </tr>
+
+        <tr>
+          <td class="column-1 center"><input type="checkbox" name="checkbox-3" id="checkbox-3"></td>
           <td><a class="client-name" href="#">Agency Name</a></td>
+          <td>Agency</td>
+          <td>SC, NC</td>
+          <td class="active-status">Active</td>
+          <td class="center edit"><img src="img/edit.png"></td>
+          <td class="center remove"><img src="img/remove.png"></td>
+        </tr>
+
+        <tr>
+          <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+          <td><a class="client-name" href="#">Agency Name</a></td>
+          <td>Agency</td>
+          <td>Multiple</td>
+          <td class="soon-status">Expiring Soon</td>
+          <td class="center edit" ><img src="img/edit.png"></td>
+          <td class="center remove"><img src="img/remove.png"></td>
+        </tr>
+
+        <tr>
+          <td class="column-1 center"><input type="checkbox" name="checkbox-2" id="checkbox-2"></td>
+          <td><a class="client-name" href="#">Agent Name</a></td>
           <td>Agency</td>
           <td>OH</td>
           <td class="active-status">Active</td>
@@ -91,7 +144,67 @@
         </tr>
 
         <tr>
-          <td class="center"><input type="checkbox" name="checkbox-3" id="checkbox-3"></td>
+          <td class="column-1 center"><input type="checkbox" name="checkbox-3" id="checkbox-3"></td>
+          <td><a class="client-name" href="#">Agency Name</a></td>
+          <td>Agency</td>
+          <td>Multiple</td>
+          <td class="expired-status">Expired</td>
+          <td class="center edit"><img src="img/edit.png"></td>
+          <td class="center remove"><img src="img/remove.png"></td>
+        </tr>
+
+        <tr>
+          <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+          <td><a class="client-name" href="#">Agency Name</a></td>
+          <td>Agency</td>
+          <td>NC</td>
+          <td class="active-status">Active</td>
+          <td class="center edit" ><img src="img/edit.png"></td>
+          <td class="center remove"><img src="img/remove.png"></td>
+        </tr>
+
+        <tr>
+          <td class="column-1 center"><input type="checkbox" name="checkbox-2" id="checkbox-2"></td>
+          <td><a class="client-name" href="#">Agent Name</a></td>
+          <td>Agency</td>
+          <td>WV</td>
+          <td class="expired-status">Expired</td>
+          <td class="center edit"><img src="img/edit.png"></td>
+          <td class="center remove"><img src="img/remove.png"></td>
+        </tr>
+
+        <tr>
+          <td class="column-1 center"><input type="checkbox" name="checkbox-3" id="checkbox-3"></td>
+          <td><a class="client-name" href="#">Agency Name</a></td>
+          <td>Agency</td>
+          <td>Multiple</td>
+          <td class="active-status">Active</td>
+          <td class="center edit"><img src="img/edit.png"></td>
+          <td class="center remove"><img src="img/remove.png"></td>
+        </tr>
+
+        <tr>
+          <td class="column-1 center"><input type="checkbox" name="checkbox-1" id="checkbox-1"></td>
+          <td><a class="client-name" href="#">Agency Name</a></td>
+          <td>Agency</td>
+          <td>Multiple</td>
+          <td class="soon-status">Expiring Soon</td>
+          <td class="center edit" ><img src="img/edit.png"></td>
+          <td class="center remove"><img src="img/remove.png"></td>
+        </tr>
+
+        <tr>
+          <td class="column-1 center"><input type="checkbox" name="checkbox-2" id="checkbox-2"></td>
+          <td><a class="client-name" href="#">Agenct Name</a></td>
+          <td>Agency</td>
+          <td>SC, VA, WV</td>
+          <td class="active-status">Active</td>
+          <td class="center edit"><img src="img/edit.png"></td>
+          <td class="center remove"><img src="img/remove.png"></td>
+        </tr>
+
+        <tr>
+          <td class="column-1 center"><input type="checkbox" name="checkbox-3" id="checkbox-3"></td>
           <td><a class="client-name" href="#">Agency Name</a></td>
           <td>Agency</td>
           <td>OH</td>
@@ -102,13 +215,15 @@
 
       </table>
     </div>
-    <p id="remove-selected">REMOVE SELECTED</p>
+      <div id="select-options"><p id="remove-selected">REMOVE SELECTED</p></div>
   </div>
 </div>
 
   <div id="foot">
-
+    <div id="grey-foot"></div>
+    <div id="black-foot"></div>
   </div>
+
 
 
 
