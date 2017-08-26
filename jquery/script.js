@@ -7,8 +7,4 @@ $(document).ready(function(){
     $(':checkbox.checkItem').prop('checked', this.checked);
     });
 
-    $('#select-all').click(function () {
-    $(':checkbox.checkItem').prop('checked', this.checked);
-    });
-
 });
