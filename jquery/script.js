@@ -1,16 +1,14 @@
 $(document).ready(function(){
-    $(".tab").click(function(){
-      $(".advanced-filter").slideToggle();
+    $('.tab').click(function(){
+      $('.advanced-filter').slideToggle();
     });
 
-    $('.tabs li').click(function(){
-      var tab_id = $(this).attr('data-tab');
+    $('#select-all-checkbox').click(function () {
+    $(':checkbox.checkItem').prop('checked', this.checked);
+    });
 
-      $('.tabs li').removeClass('current');
-      $('.tab-content').removeClass('current');
-
-      $(this).addClass('current');
-      $("#"+tab_id).addClass('current');
-    })
+    $('#select-all').click(function () {
+    $(':checkbox.checkItem').prop('checked', this.checked);
+    });
 
 });

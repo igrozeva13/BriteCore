@@ -9,13 +9,6 @@ body {
 }
 }
 
-@media only screen and (max-width: 1750px) {
-#main-body {
-  margin-left: 7%;
-  margin-right: 7%;
-}
-}
-
 @media only screen and (min-width: 1751px) {
 #main-body {
   margin-left: 20%;
